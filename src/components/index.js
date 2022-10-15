@@ -1,0 +1,11 @@
+export { default as About } from './About';
+export { default as Coin } from './Rates';
+export { default as Contact } from './Contact';
+export { default as Exchange } from './Exchange';
+export { default as FAQ } from './FAQ';
+export { default as Footer } from './Footer';
+export { default as Hero } from './Hero';
+export { default as Navbar } from './Navbar';
+export { default as RoadMap } from './RoadMap';
+export { default as Team } from './Team';
+export { default as Values } from './Values';
