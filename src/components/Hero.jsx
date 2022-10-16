@@ -27,7 +27,7 @@ const Hero = () => (
           OGCoin e-Health Africa !!
         </p>
         <p data-aos="fade-left" className={style.subHeading2}>
-          powered by OGSoft Solution Limited.
+          powered by OGSoft Solutions Limited.
         </p>
         <div data-aos="fade-up" className={style.btnContainer}>
 

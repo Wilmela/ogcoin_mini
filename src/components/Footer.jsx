@@ -29,6 +29,7 @@ const style = {
   link: 'text-gray-400 hover:text-headingColor font-light leading-[1.5]',
   right: 'flex-1',
   rightTop: 'w-full mb-4',
+  rightBottom: 'w-[280px] md:w-full',
   footer: 'w-full flex flex-col items-center lg:justify-between lg:flex-row',
   copyRight: 'text-gray-400 font-sm mb-4 text-center md:text-start',
   terms: 'flex gap-4 pb-8',
@@ -106,7 +107,7 @@ const Footer = () => (
             options={{
 						  tweetLimit: 5,
 						  height: 300,
-              width: 300,
+              width: 400,
             }}
           />
         </div>
