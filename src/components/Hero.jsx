@@ -19,16 +19,16 @@ const Hero = () => (
   <section className={layout.section}>
     <div className={style.container}>
       <div className={style.left}>
-        <p data-aos="fade-left" className={style.subHeading}>
+        <p data-aos="fade-left" className={`${style.subHeading} py-2`}>
           Let&apos;s start trading with
         </p>
 
         <p data-aos="fade-right" className={style.og}>
           OGCoin e-Health Africa !!
         </p>
-        {/* <p data-aos="fade-left" className={style.subHeading2}>
+        <p data-aos="fade-left" className={style.subHeading2}>
           powered by OGSoft Solution Limited.
-        </p> */}
+        </p>
         <div data-aos="fade-up" className={style.btnContainer}>
 
           <Button

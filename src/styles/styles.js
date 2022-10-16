@@ -1,6 +1,6 @@
 export const styles = {
   paddingX: 'px-4 md:px-8 lg:px-28',
-  paddingY: 'py-6 md:py-8 lg:py-24',
+  paddingY: 'py-10 md:py-16 lg:py-24',
   heading: 'text-3xl',
   btnStyle:
 		'w-[120px] p-2 rounded-[5px] flex items-center justify-center text-lg uppercase font-[400]',
