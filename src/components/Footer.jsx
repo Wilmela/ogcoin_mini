@@ -1,6 +1,7 @@
 import {
-  FaFacebook, FaTwitter, FaInstagram, FaLink, FaMailBulk,
+  FaFacebook, FaTwitter, FaInstagram, FaLink,
 } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 import {
   TwitterTimelineEmbed,
   // TwitterShareButton,
@@ -67,7 +68,7 @@ const Footer = () => (
               target="_blank"
               rel="noreferrer"
             >
-              <FaMailBulk />
+              <MdEmail />
             </a>
           </span>
           <span className={style.iconCircle}>
