@@ -9,7 +9,7 @@ const style = {
   ourAim: 'w-full flex flex-col items-center md:flex-row gap-8 mt-8 md:mt-12',
 
   aims: 'flex flex-col gap-4 items-center text-gray-200',
-  aimHeading: 'text-2xl leading-[38px] mb-4',
+  aimHeading: 'text-2xl leading-[38px] mb-4 text-center md:text-left',
   aimList: 'w-full flex flex-col items-start justify-start gap-4 decoration-none ',
   listItem: 'w-full flex justify-start items-start gap-2',
 };
