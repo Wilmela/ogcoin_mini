@@ -1,19 +1,22 @@
-import { FaPhone, FaVoicemail, FaLocationArrow } from 'react-icons/fa';
+import { FaPhone, FaLocationArrow } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 import { styles } from '../styles/styles';
 
 const style = {
   container: `flex flex-col md:flex-row md:justify-between gap-8 md:items-center ${styles.paddingY}`,
-  contact: 'flex flex-col items-center md:items-start justify-start gap-4 md:h-[400px]',
-  icon: 'w-10 h-10  flex items-center justify-center rounded-full bg-headingColor hover:bg-yellow-600 cursor-pointer ',
+  contact:
+		'flex flex-col items-center md:items-start justify-start gap-4 md:h-[400px]',
+  icon: `w-10 h-10  flex items-center justify-center rounded-full bg-headingColor hover:bg-yellow-600 cursor-pointer ${styles.transition}`,
   svg: 'text-lg text-white font-bold',
   contactDetail: 'w-full flex items-center justify-start gap-4',
-  detail: 'font-light text-normal w-[25ch] md:w-[40ch] hover:text-headingColor',
-  formContainer: 'w-full md:w-[45%] flex flex-col items-center md:items-start',
+  detail: `font-light text-normal w-[25ch] md:w-[40ch] hover:text-headingColor ${styles.transition}`,
+  formContainer:
+		'w-full mt-4 md:mt-0 md:w-[45%] flex flex-col items-center md:items-start',
   form: 'w-full flex flex-col items-start justify-start gap-4 ',
   label: 'w-full flex flex-col gap-2',
   input:
-		'p-2 rounded-sm border-none outline-none hover:bg-[#eee] cursor-pointer',
-  btn: 'w-full flex items-center justify-center bg-headingColor text-gray-200 rounded-sm hover:bg-yellow-600 py-2 md:w-[100px]',
+		`p-2 rounded-sm border-none outline-none hover:bg-[#eee] cursor-pointer',
+	btn: 'w-full flex items-center justify-center bg-headingColor text-gray-200 rounded-sm hover:bg-yellow-600 py-2 md:w-[100px] ${styles.transition}`,
 };
 
 const Contact = () => {
@@ -37,7 +40,7 @@ const Contact = () => {
           </span>
           <span data-aos="fade-right" className={style.contactDetail}>
             <span className={style.icon}>
-              <FaVoicemail className={style.svg} />
+              <MdEmail className={style.svg} />
             </span>
             <p className={style.detail}>
               ogsoftsolutions.com

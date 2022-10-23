@@ -21,10 +21,11 @@ import { navLinks } from '../constants';
 const style = {
   container: `w-full flex flex-col md:flex-row md:justify-between items-start ${styles.paddingY} gap-4`,
   left: 'w-full flex flex-col gap-8',
-  logoContainer: 'w-full flex justify-center items-center md:justify-start gap-2',
+  logoContainer:
+		'w-full flex justify-center items-center md:justify-start gap-2',
   socials: 'w-full flex justify-evenly md:justify-start md:gap-4',
   iconCircle:
-		'w-[40px] h-[40px] rounded-full bg-headingColor flex items-center justify-center hover:bg-yellow-600 ease-in-out duration-500',
+		`w-[40px] h-[40px] rounded-full bg-headingColor flex items-center justify-center hover:bg-yellow-600 ${styles.transition}`,
   links: 'flex flex-wrap items-center justify-center md:justify-start gap-2',
   link: 'text-gray-400 hover:text-headingColor font-light leading-[1.5]',
   right: 'flex-1',
@@ -116,7 +117,7 @@ const Footer = () => (
 
     <div className={style.footer}>
       <p className={style.copyRight}>
-        &copy;2022 OGCoin E-Health Africa all Rights Reserved.
+        &copy;2022 OGCoin e-Health Africa all Rights Reserved.
       </p>
       <div className={style.terms}>
         <span className={style.bottomLink}>

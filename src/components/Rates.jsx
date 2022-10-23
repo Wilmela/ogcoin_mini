@@ -71,7 +71,7 @@ const Rates = () => {
             value={searchTerm}
           />
           {isError && (
-          <p className="mt-8 text-red-500">{error.error.slice(0, 24)}</p>
+          <p className="mt-8 text-red-500 font-light">{error.error}</p>
           )}
         </div>
         {!isFetching ? (

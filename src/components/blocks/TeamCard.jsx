@@ -1,10 +1,12 @@
-import React from 'react';
 import { FaFacebook, FaLinkedinIn } from 'react-icons/fa';
+import { styles } from '../../styles/styles';
 
 const TeamCard = ({
   image, name, position, fb, linkedIn,
 }) => (
-  <div className="w-full  md:h-[230px] h-[400px] max-h-[400px] md:w-[470px] flex flex-col md:flex-row items-center justify-start gap-4 p-4 rounded-md  hover:bg-gradient-to-tr from-gray-900 hover:scale-105 ease-in-out to-gray-600 cursor-pointer">
+  <div
+    className={`w-full  md:h-[230px] max-h-[380px] md:w-[470px] flex flex-col md:flex-row items-center justify-start gap-4 p-4 rounded-md  hover:bg-gradient-to-tr from-gray-900 hover:scale-105 ${styles.transition}to-gray-600 cursor-pointer`}
+  >
     <div className="w-[150px] h-[150px] rounded-full overflow-hidden border-2 border-[#f5b915]">
       <img src={image} alt="profile" />
     </div>

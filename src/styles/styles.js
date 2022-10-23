@@ -9,8 +9,8 @@ export const styles = {
 		'text-lg md:text-xl md:tracking-widest font-light text-[#0666f9] mb-8 md:mb-12 ',
 
   yellowGradient: 'yellow-gradient w-[400px] h-[400px] rounded-full absolute',
-  whiteGradient:
-		'white-gradient w-[300px] h-[300px] rounded-full absolute ',
+  whiteGradient: 'white-gradient w-[300px] h-[300px] rounded-full absolute ',
+  transition: 'ease-in duration-300',
 };
 
 export const layout = {

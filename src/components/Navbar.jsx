@@ -40,12 +40,12 @@ const Navbar = () => {
     links: 'md:flex flex-col items-center hidden md:mr-4 lg:mr-6 xl-12',
     dot: 'w-2 h-2 rounded-full bg-transparent animate-bounce',
     linkTitle:
-			'font-light text-lg uppercase text-gray-200 hover:text-[#0065fd]',
+			`font-light text-lg uppercase text-gray-200 hover:text-[#0065fd] ${styles.transition}`,
 
     mobileContainer:
-			'justify-start gap-2 pt-8 w-[80%] h-screen bg-gray-800 fixed top-[60px] right-0 z-50 border-gray-600 rounded-tl-md animate-slideLeft',
+			'justify-start gap-2 pt-8 w-[80%] h-screen bg-gray-800 fixed top-[72px] right-0 z-50 border-gray-600 rounded-tl-md animate-slideLeft',
     backToTopBtn:
-			'fixed bottom-[20px] right-[20px] w-12 h-12 rounded-full bg-yellow-600 flex items-center justify-center animate-slideLeft z-50 hover:bg-headingColor',
+			`fixed bottom-[20px] right-[20px] w-12 h-12 rounded-full bg-yellow-600 flex items-center justify-center animate-slideLeft z-50 hover:bg-headingColor ${styles.transition}`,
   };
 
   return (
