@@ -26,6 +26,15 @@ const Navbar = () => {
     };
   }, [handleShow]);
 
+  useEffect(() => {
+    if (toggle) {
+      document.body.style.overflow = 'hidden';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  });
+
   const backToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   const style = {
