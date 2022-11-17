@@ -2,8 +2,8 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const baseURL = 'https://coingecko.p.rapidapi.com/coins';
 
-export const coinGeekoApi = createApi({
-  reducerPath: 'coinGeekoApi',
+export const coinGeekoAPI = createApi({
+  reducerPath: 'coinGeekoAPI',
   baseQuery: fetchBaseQuery({
     baseUrl: baseURL,
     prepareHeaders: (headers) => {
@@ -29,4 +29,4 @@ export const {
   useGetCoinByCurrencyQuery,
   useGetCoinHistoryByDateQuery,
   useGetCoinByNameQuery,
-} = coinGeekoApi;
+} = coinGeekoAPI;

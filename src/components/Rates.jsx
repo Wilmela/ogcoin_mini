@@ -1,9 +1,15 @@
 import { useState } from 'react';
+import { DebounceInput } from 'react-debounce-input';
+// import axios from 'axios';
 import { layout, styles } from '../styles/styles';
 // import images from '../assets/images';
 import CoinCard from './blocks/CoinCard';
 
 import { useGetCoinByCurrencyQuery } from '../redux/services/coinGeeko';
+// import {
+//   useGetAssetsQuery,
+//   useGetTickerInfoQuery,
+// } from '../redux/services/tarmex';
 
 const style = {
   container: 'flex-1 flex flex-col items-center gap-4 relative',
@@ -48,22 +54,49 @@ const style = {
 // ];
 const Rates = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  // const [tarmexData, setTarmexData] = useState([]);
   const {
     data, isFetching, isError, error,
   } = useGetCoinByCurrencyQuery('usd');
+
+  // const tarmexAssets = useGetAssetsQuery();
+  // const tarmexTicker = useGetTickerInfoQuery();
+
+  // useEffect(() => {
+  //   setTarmexData({
+  //     assets: tarmexAssets.data,
+  //     ticker: tarmexTicker.data,
+  //   });
+  // }, [tarmexAssets.data, tarmexTicker.data]);
+
+  // console.log(tarmexData.isError ? tarmexData.error : tarmexData);
+
+  // useEffect(() => {
+  //   const txData = async () => {
+  //     try {
+  //       const { res } = await axios.get('https://cors-anywhere.herokuapp.com/https://tarmex.io/api/v1/assets');
+  //       console.log('Tarmex Axios data return =====>', res.data);
+  //     } catch (e) {
+  //       console.log(e.message);
+  //     }
+  //   };
+  //   txData();
+  // }, []);
 
   const filteredData = data?.filter((coin) => coin.name.includes(searchTerm)
   || coin.symbol.includes(searchTerm.toLowerCase()));
 
   return (
-    <section id="rates" className={layout.section}>
+    <section id="explore" className={layout.section}>
       <div className={style.container}>
         <div data-aos="fade-down" className={style.heading}>
           <h1 className={styles.headingText}>Top Cryptocurrencies</h1>
           <p className={styles.subHeadingText}>Powered By CoinGeekoApi</p>
 
-          <input
+          <DebounceInput
             data-aos="fade-right"
+            minLength={2}
+            debounceTimeout={500}
             type="text"
             placeholder="Enter name e.g. Bitcoin or btc"
             className={style.search}
@@ -77,14 +110,7 @@ const Rates = () => {
         {!isFetching ? (
           <div data-aos="fade-left" className={style.coins}>
             {filteredData?.slice(0, 8).map((coin) => (
-              <CoinCard
-                key={coin.id}
-                image={coin.image}
-                name={coin.name}
-                symbol={coin.symbol}
-                current_price={coin.current_price}
-                ath_change_percentage={coin.ath_change_percentage}
-              />
+              <CoinCard key={coin.name} coin={coin} />
             ))}
           </div>
         ) : (

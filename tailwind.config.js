@@ -3,15 +3,20 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-image': "url('/src/assets/images/darkBg.jpg')",
+      },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
-        roboto: ['Roboto', 'san-serif'],
+        ptSans: ['PT sans', 'san-serif'],
+        oxygen: ['Oxygen', 'san-serif'],
       },
       colors: {
         bg: '#0C120C',
         headingColor: '#0065fd',
       },
       screens: {
+        xs: '426px',
         ss: '600px',
         md: '920px',
         lg: '1160px',
@@ -32,5 +37,11 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  // eslint-disable-next-line global-require
+  plugins: [require('@tailwindcss/line-clamp')],
+  variant: {
+    extend: {
+      lineClamp: ['hover'],
+    },
+  },
 };

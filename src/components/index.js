@@ -1,7 +1,7 @@
 export { default as About } from './About';
 export { default as Coin } from './Rates';
 export { default as Contact } from './Contact';
-export { default as Exchange } from './Exchange';
+export { default as Exchanges } from './Exchanges';
 export { default as FAQ } from './FAQ';
 export { default as Footer } from './Footer';
 export { default as Hero } from './Hero';

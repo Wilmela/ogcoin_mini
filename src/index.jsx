@@ -5,6 +5,7 @@ import store from './redux/store';
 import App from './App';
 import './index.css';
 import 'aos/dist/aos.css';
+// import 'rsuite/dist/rsuite.min.css';
 
 const root = createRoot(document.getElementById('root'));
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Roboto:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Oxygen:wght@300&family=PT+Sans&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -32,7 +32,7 @@ a {
 	color: inherit;
 }
 body {
-	font-family: 'Poppins', 'Roboto', sans-serif;
+	font-family: 'PT Sans', 'Roboto', sans-serif;
 	min-height: 100%;
 }
 .white-gradient {
@@ -41,15 +41,63 @@ body {
 }
 
 .yellow-gradient {
-	background: linear-gradient(
+	background: -webkit-linear-gradient(
 		117deg,
 		rgba(160, 123, 11, 0.1) 40%,
 		rgba(255, 255, 255, 0.1) 80%
 	);
-	background: linear-gradient(
+	background: -webkit-linear-gradient(
 		45deg,
 		rgba(237, 205, 110, 0.1) 40%,
 		rgba(32, 82, 233, 0.3) 80%
 	);
 	filter: blur(600px);
+}
+
+button {
+	color: inherit;
+	font: inherit;
+}
+
+ul {
+	list-style-type: none;
+	padding: none;
+	margin: none;
+}
+
+li {
+	text-decoration: none;
+	font: inherit;
+	color: inherit;
+}
+
+.bgColor {
+	background: rgb(50, 49, 49);
+	background: linear-gradient(
+		104deg,
+		rgba(50, 49, 49, 1) -40%,
+		rgba(4, 2, 29, 1) -0%,
+		rgba(0, 0, 0, 1) 100%
+	);
+}
+
+.menuItem {
+	cursor: pointer;
+}
+.menuItem div:first-child {
+	display: none;
+}
+.menuItem:hover div:first-child {
+	animation: showUp 1000 ease-in forwards;
+	display: block;
+}
+@keyframes showUp {
+	from {
+		opacity: 0;
+		transform: scale(0%);
+	}
+	to {
+		opacity: 1;
+		transform: scale(110%);
+	}
 }

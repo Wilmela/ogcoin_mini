@@ -5,7 +5,7 @@ import TeamCard from './blocks/TeamCard';
 const style = {
   container: `${styles.paddingY} relative`,
   heading: 'w-full flex flex-col items-center',
-  team: 'w-full flex flex-col md:flex-row md:flex-wrap gap-8 justify-between',
+  team: 'w-full flex flex-col md:flex-row md:flex-wrap gap-4 justify-between',
 };
 const Team = () => (
   <section id="team" className={styles.section}>

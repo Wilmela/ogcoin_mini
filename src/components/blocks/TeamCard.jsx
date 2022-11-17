@@ -11,11 +11,11 @@ const TeamCard = ({
       <img src={image} alt="profile" />
     </div>
     <div>
-      <div className="w-[250px] flex flex-col gap-2 items-start">
-        <h3 className="w-full text-2xl text-center md:text-left text-gray-400">
+      <div className="w-[250px] flex flex-col gap-2 justify-between items-start">
+        <h3 className="w-full text-2xl text-center md:text-left text-gray-300 font-poppins">
           {name}
         </h3>
-        <p className="w-full text-sm text-center md:text-left font-light leading-[25px] capitalize text-headingColor flex-wrap">
+        <p className="w-full text-sm text-center md:text-left font-light leading-[25px] capitalize text-headingColor flex-wrap font-oxygen">
           {position}
         </p>
         <span className="w-full flex items-center gap-2 justify-center md:justify-start">

@@ -1,16 +1,17 @@
 import { useEffect } from 'react';
 import Aos from 'aos';
+import { Toaster } from 'react-hot-toast';
 import { styles } from './styles/styles';
 import {
   Navbar,
   Hero,
   Coin,
   About,
-  // Exchange,
-  // Values,
-  // RoadMap,
+  Exchanges,
+  Values,
+  RoadMap,
+  FAQ,
   Team,
-  // FAQ,
   Contact,
   Footer,
 } from './components';
@@ -22,27 +23,40 @@ function App() {
   }, []);
 
   const style = {
-    app: 'w-full flex justify-center bg-gray-900 text-gray-200 overflow-hidden',
-    container: `w-full ${styles.paddingX} max-w-[1240px] min-h-screen`,
+    app: 'flex justify-center bg-gray-900 text-gray-200 overflow-hidden',
+    container: `w-full ${styles.paddingX} max-w-[1400px] min-h-screen`,
   };
   return (
-    <div className={style.app}>
-      <div className={style.container}>
-        <Navbar />
-        <Hero />
-        <Coin />
-        <About />
-        <Team />
-        <Contact />
-        <Footer />
+    <>
+      <div className={style.app}>
+        <div className={style.container}>
+          <Toaster
+            position="topRight"
+            toastOptions={{
+						  style: {
+						    fontSize: '1rem',
+						  },
+            }}
+          />
+          <Navbar />
+          <Hero />
+          <Coin />
+          <About />
+          <Exchanges />
+          <Values />
+          <RoadMap />
+          <Team />
+          <FAQ />
+          <Contact />
+        </div>
       </div>
-      {/*
-      <Exchange />
-      <Values />
-      <RoadMap />
-      <FAQ />
-     */}
-    </div>
+
+      <div className={`${style.app} bg-gradient-to-br from-black to-slate-800`}>
+        <div className={style.container}>
+          <Footer />
+        </div>
+      </div>
+    </>
   );
 }
 

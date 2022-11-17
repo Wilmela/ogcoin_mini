@@ -17,6 +17,8 @@ import {
 import { styles } from '../styles/styles';
 import images from '../assets/images';
 import { navLinks } from '../constants';
+import OGCTERMS from '../assets/ogcTerms.pdf';
+import PAPER from '../assets/ogcWhitePaper.pdf';
 
 const style = {
   container: `w-full flex flex-col md:flex-row md:justify-between items-start ${styles.paddingY} gap-4`,
@@ -24,17 +26,18 @@ const style = {
   logoContainer:
 		'w-full flex justify-center items-center md:justify-start gap-2',
   socials: 'w-full flex justify-evenly md:justify-start md:gap-4',
-  iconCircle:
-		`w-[40px] h-[40px] rounded-full bg-headingColor flex items-center justify-center hover:bg-yellow-600 ${styles.transition}`,
+  iconCircle: `w-[40px] h-[40px] rounded-full bg-headingColor flex items-center justify-center hover:bg-yellow-600 ${styles.transition}`,
   links: 'flex flex-wrap items-center justify-center md:justify-start gap-2',
-  link: 'text-gray-400 hover:text-headingColor font-light leading-[1.5]',
+  link: 'text-gray-400 hover:text-headingColor font-light font-poppins leading-[1.5]',
   right: 'flex-1',
   rightTop: 'w-full mb-4',
   rightBottom: 'w-[280px] md:w-full',
-  footer: 'w-full flex flex-col items-center lg:justify-between lg:flex-row',
-  copyRight: 'text-gray-400 font-sm mb-4 text-center md:text-start',
-  terms: 'flex gap-4 pb-8',
-  bottomLink: 'text-gray-400 font-sm ',
+  footer:
+		'w-full flex justify-start lg:justify-between lg:flex-row border-t border-gray-700 pt-2 gap-4',
+  copyRight:
+		'flex-1 md:w-[50%] text-gray-400 font-sm mb-4 text-center md:text-start font-oxygen',
+  terms: 'flex-1 flex flex-col md:flex-row md:justify-end md:gap-4 pb-8 ',
+  bottomLink: 'text-gray-400 font-sm hover:text-blue-500 font-oxygen',
 };
 
 const Footer = () => (
@@ -43,7 +46,7 @@ const Footer = () => (
       <div data-aos="fade-up" className={style.left}>
         <div className={style.logoContainer}>
           <img src={images.ogcoin} alt="ogcoin" className="w-8 md:w-10 " />
-          <p className="text-2xl font-bold">OGCoin</p>
+          <p className="text-2xl font-bold font-poppins">OGCoin</p>
         </div>
         <div className={style.socials}>
           <span className={style.iconCircle}>
@@ -89,11 +92,21 @@ const Footer = () => (
           </span>
         </div>
         <div className={style.links}>
-          {navLinks.map((link) => (
-            <p className={style.link} key={link.id}>
-              {link.title}
-            </p>
-          ))}
+          {navLinks.map((link, index) => {
+            const i2 = index === 3;
+            return (
+              <a
+                key={link.id}
+                target={`${i2 ? '_blank' : ''}`}
+                href={`${i2 ? PAPER : `#${link.id}`}`}
+                rel={`${i2 ? 'noopener noreferrer' : ''}`}
+              >
+                <p className={style.link} key={link.id}>
+                  {link.title}
+                </p>
+              </a>
+            );
+          })}
         </div>
       </div>
 
@@ -117,11 +130,11 @@ const Footer = () => (
 
     <div className={style.footer}>
       <p className={style.copyRight}>
-        &copy;2022 OGCoin e-Health Africa all Rights Reserved.
+        &copy;2022 OGCoin E-Health Africa all Rights Reserved.
       </p>
       <div className={style.terms}>
         <span className={style.bottomLink}>
-          <a href="#home">Terms & Condition </a>
+          <a href={OGCTERMS} target="_blank" rel="noopener noreferrer">Terms & Condition </a>
         </span>
         <span className={style.bottomLink}>
           <a href="#home">Privacy Policy</a>

@@ -1,9 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { coinGeekoApi } from './services/coinGeeko';
+import { coinGeekoAPI } from './services/coinGeeko';
+import { tarmexAPI } from './services/tarmex';
 
 export default configureStore({
   reducer: {
-    [coinGeekoApi.reducerPath]: coinGeekoApi.reducer,
+    [coinGeekoAPI.reducerPath]: coinGeekoAPI.reducer,
+    [tarmexAPI.reducerPath]: tarmexAPI.reducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(coinGeekoApi.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware()
+    .concat(coinGeekoAPI.middleware, tarmexAPI.middleware),
 });
